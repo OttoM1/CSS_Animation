@@ -1,0 +1,453 @@
+
+
+
+.monsterGrid {
+    display: flex; position: absolute; top: 0; left: 0; width: 100%; height: 100%; min-height: 700px; background: white;
+
+}
+body {
+    background: white;
+}
+.section1m {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    left: 0;
+    opacity: 0;
+    background: white;
+                animation: revealBody 2.5s ease-in-out forwards;
+
+}
+
+@keyframes revealBody {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.bodyAnim {
+position: absolute;
+top: 10%;
+left: 30%;
+height: 270px;
+width: 170px;
+border-radius: 50%;
+box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+background: linear-gradient(to bottom, purple, purple, rgb(17, 17, 219), rgb(17, 188, 194));
+}
+
+.underLid {
+     position: absolute;
+    bottom: 172px;
+    left: 36px;
+    width: 35px;
+    height: 0;
+    animation: blink 5s ease-in-out infinite;
+    background: linear-gradient(to top, transparent 0%, purple 14%, purple 100%);
+}
+
+.underLid2 {
+     position: absolute;
+    bottom: 172px;
+    left: 100px;
+    width: 35px;
+    height: 0;
+    animation: blink 5s ease-in-out infinite;
+    background: linear-gradient(to top, transparent 0%, purple 14%, purple 100%);
+}
+
+@keyframes blink {
+    0%, 100% {
+        height: 0;
+    }
+    30% {
+        height: 0;
+    }
+    40% {
+        height: 42px;
+    }
+    50% {
+        height: 0;
+    }
+}
+
+.eyesAnim {
+    position: absolute;
+    top: 50px;
+    left: 38px;
+    width: 29px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+
+}
+
+@keyframes blink2 {
+    0%, 28%, 50%, 100% {
+        transform: scaleY(1);
+    }
+    38% {
+        transform: scaleY(.7);
+    }
+}
+
+.eyesAnim2 {
+    position: absolute;
+    top: 50px;
+    right: 38px;
+    width: 25px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+animation: blink2 5s ease-in-out infinite;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+}
+.mouthAnim {
+     position: absolute;
+    top: 108px;
+    right: 55px;
+    width: 60px;
+    height: 15px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse at center, black, rgb(2, 2, 2), rgb(189, 117, 137));
+    animation: mouthA 5s ease-in-out infinite;
+}
+.innerEye {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: black;
+        animation: innerEyeA 5s ease-in-out infinite;
+
+}
+@keyframes innerEyeA {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    20%{
+        transform:  translateX(-2px) translateY(1px);
+    }
+    30% {
+        transform: translateX(-2px) translateY(2px);
+    }
+    40% {
+                transform:  translateX(0px) translateY(3pxpx);
+
+    }
+     50% {
+                transform: translateX(-3px) translateY(5px);
+
+    }
+
+    60% {
+ 
+                transform: translateX(-3px) translateY(7px);
+
+    
+    }
+    80% {
+                        transform: translateX(0px) translateY(3);
+
+    }
+    100% {
+                                transform: translateX(0) translateY(0);
+
+    }
+    
+}
+
+.eyeLid {
+    position: absolute;
+    top: -5px;
+    z-index: 9999;
+    left: -4px;
+    height: 5px;
+    width: 36px;
+
+    background: purple;
+    animation:  eyeLidA 5s ease-in-out infinite;
+}
+
+.iris {
+    width: 2.7px;
+    height: 2.7px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 9999;
+}
+
+@keyframes eyeLidA {
+    0% {
+        height: 0px;
+    }
+    10% {
+        height: 5px;
+    }
+    30% {
+        height: 0;
+    }
+    40% {
+        height: 30px;
+    }
+    50% {
+        height: 0;
+    }
+    85% {
+        height: 2px;
+    }
+    90% {
+        height: 0;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes mouthA {
+    0% {
+        transform: scaleX(.6) scaleY(1);
+    }
+   50% {
+    transform: scaleX(.55) scaleY(1.1);
+    border-radius: 50%;
+   } 
+   100% {
+    transform: scaleX(.6) scaleY(1);
+   }
+}
+
+.eyeBrow {
+    position: absolute;
+    top: 40px;
+    left: 38px;
+    width: 28px;
+    height: 2px;
+    border-radius: 4px;
+    background: rgb(49, 0, 112);
+        animation: eyeb 5s ease-in-out infinite;
+opacity: .5;
+}
+
+.eyeBrow2 {
+    position: absolute;
+    top: 40px;
+    right: 38px;
+    width: 28px;
+    height: 2px;
+    border-radius: 4px;
+    animation: eyeb 5s ease-in-out infinite;
+    background: rgb(49, 0, 112);
+opacity: .5;
+}
+
+@keyframes eyeb {
+    0% {
+   transform: translateY(0);
+}
+12% {
+    transform: translateY(0);
+}
+   25% {
+       transform: translateY(-3px);
+
+   }
+   60% {
+    transform: translateY(0);
+   }
+    100% {
+    
+   transform: translateY(0);
+
+    
+    }
+}
+@keyframes pop {
+    0% {
+        transform: scaleY(.9) translateY(50px);
+
+    }
+    10% {
+        transform: translateY(35px);
+    }
+    20% {
+        transform: translateY(35px);
+    }
+    60% {
+        transform: scaleY(.9) translateY(50px);
+    }
+    75% {
+        transform: scaleY(1) translateY(0);
+    }
+    100% {
+        transform: scaleY(1) translateY(0);
+    }
+}
+.monster{
+    animation: pop 7s ease-in forwards 10s;
+    display: flex; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white;
+}
+
+.spikes {
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(to top, purple, purple, rgb(255, 0, 51), rgb(255, 15, 135));
+    height: 50px;
+    width: 15px;
+    left: 30%;
+    top: 10%;
+    transform: rotate(-45deg);
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+
+}
+
+.spikes2 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(to top, purple, purple, rgb(255, 0, 51), rgb(255, 15, 135));
+    height: 50px;
+    width: 15px;
+    left: calc(30% + 152px);
+    top: 10%;
+    transform: rotate(45deg);
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+
+}
+
+
+.spikes3 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(to top, purple, purple, rgb(255, 0, 51), rgb(255, 15, 135));
+    height: 50px;
+    width: 15px;
+    left: calc(30% + 35px);
+    top: 10%;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+
+    transform: rotate(-5deg);
+}
+
+.spikes4 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(to top, purple, purple, rgb(255, 0, 51), rgb(255, 15, 135));
+    height: 50px;
+    width: 15px;
+    left: calc(30% + 120px);
+    top: 10%;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+
+    transform: rotate(12deg);
+}
+
+
+.spikes5 {
+    position: absolute;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: linear-gradient(to top, purple, purple, rgb(255, 0, 51), rgb(255, 15, 135));
+    height: 50px;
+    width: 15px;
+    left: calc(30% + 78px);
+    top: 6%;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+
+    z-index: 9999;
+}
+
+.monsterDiv {
+     min-width: 300px; background: linear-gradient(160deg, rgb(250, 209, 250), rgb(215, 136, 215), rgb(135, 135, 245), rgb(146, 243, 246));
+; width: 92%;
+        height: 51svh;
+        min-height: 300px;
+        max-width: 800px;
+        border-radius: 4%;
+
+        display: flex;
+        box-shadow: inset 0 0 10px black;
+        flex-direction: column; z-index: 100; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%);
+}
+
+.monsterDiv h3 {
+    font-family: 'Orbitron', sans-serif;
+     color: rgb(255, 255, 255); font-size: 2.5em; text-shadow: 0 0 2px rgb(0, 0, 0); text-align: left; margin-left: 12px; margin-top: 12px;
+}
+     
+
+.start {
+    width: 80px;
+    height: 80px;
+    padding: .5em .4em;
+    font-size: 1em;
+    align-self: center;
+    margin-top: 6em;
+    border-radius: 50%;
+    border: 1px solid pink;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    background: rgba(24, 205, 112, 0.958);
+animation: pingPong 8s ease-in-out infinite;
+}
+
+
+
+@keyframes pingPong {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    10% {
+        transform: translateY(30px) translateX(0);
+    }
+    20% {
+        transform: translateY(-20px) translateX(14px);
+    }
+    30% {
+        transform: translateY(50px) translateX(4px);
+    }
+    40% {
+        transform: translateY(-40px) translateX(20px);
+    }
+    50% {
+        transform: translateY(-10px) translateX(5px);
+    }
+    60% {
+        transform: translateY(30px) translateX(0);
+    }
+    70% {
+        transform: translateY(-20px) translateX(14px);
+    }
+    80% {
+        transform: translateY(50px) translateX(30px);
+    }
+    90% {
+        transform: translateY(-40px) translateX(20px);
+    }
+    100% {
+        transform: translateY(-10px) translateX(5px);
+    }
+}
+
+
+

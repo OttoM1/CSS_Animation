@@ -1,0 +1,164 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link href="robot.css" rel="stylesheet">
+<style>
+    body,
+    html {
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: white;
+    }
+
+    .robotEyelid {
+        position: absolute;
+        top: -3px;
+        left: -2px;
+        width: 38px;
+        z-index: 999;
+        height: 1px;
+        background: white;
+        animation: eyeLidblink 4.6s ease-in-out infinite;
+    }
+.robotLowerlid {
+    z-index: 999;
+     position: absolute;
+        bottom: -2px;
+        left: -2px;
+        width: 38px;
+        height: 1px;
+        background: white;
+        animation: blinkunder 4.6s ease-in-out infinite;
+}
+</style>
+</head>
+<body>
+    
+
+    <section class="section1">
+
+
+        
+
+<div class="bc">
+<div class="lampGrid">
+<div class="string">
+    <div class="bulb"></div>
+</div>
+   
+
+    <div class="glowBulb"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="RobotGrid" >
+
+
+<div class="robotHead">
+
+<div class="antenna"></div>
+<div class="antenna2"></div>
+<div class="antennaBulb"></div>
+<div class="robotEye">
+    <div class="robotEyelid"></div>
+    <div class="robotIris"></div>
+        <div class="robotLowerlid"></div>
+
+</div>
+<div class="robotEye2">
+        <div class="robotEyelid"></div>
+
+        <div class="robotIris"></div>
+        <div class="robotLowerlid"></div>
+
+</div>
+<div class="robotMouth"></div>
+
+</div>
+
+
+
+<div class="neck"></div>
+<div class="torso">
+
+<div class="shoulder"></div>
+<div class="shoulder2"></div>
+
+<div class="upperArm"></div>
+<div class="upperArm2"></div>
+
+<div class="lowerArm"></div>
+<div class="lowerArm2"></div>
+
+<div class="joint"></div>
+<div class="joint2"></div>
+
+<div class="hand"></div>
+<div class="hand2"></div>
+
+</div>
+
+<div class="spine"></div>
+<div class="gut"></div>
+
+
+<div class="upperLeg"></div>
+<div class="upperLeg2"></div>
+
+<div class="legJoint"></div>
+<div class="legJoint2"></div>
+
+
+<div class="lowerLeg"></div>
+<div class="lowerLeg2"></div>
+
+<div class="foot"></div>
+<div class="foot2"></div>
+
+
+<div class='mainBubble'>
+    <p class='p' id="text">Hello there!</p>
+
+
+    <div class='smallBubble'></div>
+    <div class='smallBubble2'></div>
+
+</div>
+</div>   
+
+
+
+</div>
+
+</section>
+
+<script>
+setTimeout(() => {
+const p = document.getElementById("text");
+p.classList.add("fade-out");
+
+setTimeout(() => {
+p.textContent = "Just a moment.";
+p.classList.remove("fade-out");
+}, 500);
+}, 15800); // X seconds
+</script>
+</body>
+</html>
