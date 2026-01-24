@@ -1,0 +1,352 @@
+
+
+.toastingBody {
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    animation: revealToasting 3s ease-in forwards, hide 5s ease-in-out forwards 4s;
+}
+
+.toastingWrapper {
+    width: 330px;
+    display: flex;
+    height: 400px;
+    background: black;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.toastingEye {
+    width: 104px;
+    box-shadow: 0 0 2px rgba(0, 112, 0, 0.503);
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    top: 45%;
+    left: 20px;
+}
+
+.eyeRing {
+    box-shadow: 0 0 2px rgba(0, 112, 0, 0.503);
+width: 104px;
+height: 50px;
+border-radius: 50%;
+background: transparent;
+position: absolute;
+top: 45%;
+z-index: 1000;
+left: 20px;
+animation: blink2 5s ease-in-out infinite;
+}
+
+.toastingEye2 {
+    width: 104px;
+    height: 50px;
+    box-shadow: 0 0 2px rgba(0, 112, 0, 0.503);
+    border-radius: 50%;
+    background:black;
+    position: absolute;
+    top: 45%;
+    right: 20px;
+}
+
+.eyeRing2 {
+    box-shadow: 0 0 2px rgba(0, 112, 0, 0.503);
+width: 104px;
+height: 50px;
+animation: blink2 5s ease-in-out infinite;
+
+border-radius: 50%;
+background: transparent;
+position: absolute;
+top: 45%;
+z-index: 1000;
+right: 20px;
+}
+
+.toastingIris {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 16px;
+    height: 40px;
+    border-radius: 50%;
+    background: radial-gradient(circle at center, rgb(3, 66, 3), rgb(7, 124, 7), rgb(13, 187, 77));
+}
+
+.toastingBulb {
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    background: radial-gradient(circle at center, rgb(2, 76, 2), rgb(7, 124, 7), rgb(2, 177, 2));
+    width: 48px;
+    height: 48px;
+    animation: bulbThrob 1s ease-in-out infinite;
+    border-radius: 50%;
+}
+
+.irisSplit {
+             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+background: black;
+position: absolute;
+top: 42%;
+
+right: 0;
+width: 10px;
+height: 10px;
+transform: rotate(-90deg) ;
+}
+
+.irisSplit2 {
+             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+background: black;
+position: absolute;
+top: 42%;
+left: 0;
+width: 10px;
+height: 10px;
+transform: rotate(90deg) ;
+
+}
+
+
+
+
+
+@keyframes eyeLidA {
+    0% {
+        height: 0px;
+    }
+    10% {
+        height: 5px;
+    }
+    30% {
+        height: 0;
+    }
+    40% {
+        height: 30px;
+    }
+    50% {
+        height: 0;
+    }
+    85% {
+        height: 2px;
+    }
+    90% {
+        height: 0;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes blink2 {
+    0% {
+height: 50px;
+    }
+    30% {
+height: 50px;
+margin-top: 0;
+    }
+     40% {
+height: 1px;
+margin-top: 23px;
+    }
+     48% {
+height: 50px;
+margin-top: 0;
+    }
+     100% {
+height: 50px;
+
+    }
+}
+
+
+.eyeLidx {
+    position: absolute;
+    top: -2px;
+    z-index: 999;
+    left: -5px;
+    height: 5px;
+    width: 116px;
+
+    background: black;
+    animation:  eyeLidA 5s ease-in-out infinite;
+}
+
+
+.underLidx {
+     position: absolute;
+    bottom: 169px;
+    left: 12px;
+    width: 116px;
+    height: 0;
+    animation: blink 5s ease-in-out infinite;
+background: black;
+}
+
+.underLid2x {
+     position: absolute;
+    bottom: 169px;
+    right: 12px;
+    width: 116px;
+    height: 0;
+    animation: blink 5s ease-in-out infinite;
+background: black;
+}
+
+@keyframes blink {
+    0%, 100% {
+        height: 0;
+    }
+    30% {
+        height: 0;
+    }
+    40% {
+        height: 35px;
+    }
+    50% {
+        height: 0;
+    }
+}
+
+
+
+@keyframes bulbThrob {
+    0% {
+        filter: brightness(1.2) saturate(1.1) contrast(.9);
+    box-shadow: 0 0 8px rgb(106, 255, 106);
+    }
+     50% {
+        filter: brightness(1) saturate(1) contrast(1);
+        box-shadow: 0 0 5px rgb(106, 255, 106);
+
+    }
+     100% {
+        filter: brightness(1.2) saturate(1.1) contrast(.9);
+        box-shadow: 0 0 8px rgb(106, 255, 106);
+
+    }
+    
+}
+
+.loaderWrapper {
+    font-size: 2.6em;
+    position: absolute;
+    top: calc(40% + 100px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Orbitron';
+    width: 200px;
+    text-align: center;
+    
+    height: 2.8em;
+    text-shadow: 0 2px 8px rgb(0, 216, 0);
+}
+
+
+@keyframes revealToasting {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.percentage {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  counter-reset: percent 0;
+  animation: count 6s steps(100) forwards 2s;
+}
+
+.percentage::after {
+  content: counter(percent) "%";
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background:green;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #0b6c00, #11ff5c);
+  animation: load 6s linear forwards 2s;
+}
+
+@keyframes count {
+  0% {
+    counter-reset: percent 0;
+  }
+  20% {
+            counter-reset: percent 33;
+
+  }
+  33% {
+        counter-reset: percent 33;
+
+  }
+
+  33% {
+        counter-reset: percent 69;
+
+  }
+
+  90% {
+        counter-reset: percent 90;
+
+  }
+  99% {
+            counter-reset: percent 99;
+
+  }
+  100% {
+    counter-reset: percent 100;
+  }
+}
+
+@keyframes load {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        95% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+            display: none;
+            visibility: hidden;
+        }
+
+}
+
