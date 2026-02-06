@@ -573,22 +573,22 @@ animation: stringPull 2.9s ease-in-out forwards 4.8s, pull2 4s ease-in-out forwa
 }
 
 @keyframes sway {
-  /* initial drop */
+
   0% {
     transform: rotate(0deg) translateY(-200px) scaleY(1);
   }
 
-  /* first big impact */
+
   18% {
     transform: rotate(2deg) translateY(0px) scaleY(1.25);
   }
 
-  /* rebound */
+
   32% {
     transform: rotate(0deg) translateY(30px) scaleY(0.95);
   }
 
-  /* second bounce (smaller, faster) */
+
   44% {
     transform: rotate(-1.2deg) translateY(-14px) scaleY(1.12);
   }
@@ -597,7 +597,7 @@ animation: stringPull 2.9s ease-in-out forwards 4.8s, pull2 4s ease-in-out forwa
     transform: rotate(0deg) translateY(12px) scaleY(0.98);
   }
 
-  /* third bounce */
+
   64% {
     transform: rotate(0.8deg) translateY(-6px) scaleY(1.06);
   }
@@ -606,7 +606,7 @@ animation: stringPull 2.9s ease-in-out forwards 4.8s, pull2 4s ease-in-out forwa
     transform: rotate(0deg) translateY(4px) scaleY(0.99);
   }
 
-  /* tiny settling jitter */
+
   82% {
     transform: rotate(-0.4deg) translateY(-2px) scaleY(1.02);
   }
