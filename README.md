@@ -1,4 +1,4 @@
-Copy each link to observe. (free to use and customize)
+Hardcoded CSS animations with keyframes
 
 https://ottom1.github.io/CSS_Animation/toast.html
 
